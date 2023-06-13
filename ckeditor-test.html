@@ -22,7 +22,7 @@
     <script src="ckeditor.js"></script>
 </head>
 <body>
-    <h1>Napucana verzija ck editora</h1>
+    <h1 style="width: 1000px; margin: 20px auto;">Napucana verzija ck editora</h1>
     <div id="container">
         <div id="editor">
             <div id="context">
@@ -33,10 +33,12 @@
         </div>
     </div>
     
-    <button id="save" onClick="save()">Proba</button>
-    <button id="save2" onClick="napraviSablon()">Napravi sablon</button>
+    <div style="text-align: center;">
+        <button id="save" onClick="save()">Proba</button>
+    </div>
+   
 
-    <div id="test" style="border: 1px solid black;"></div>
+    <div id="test" style="border: 1px solid black;width: 1000px; margin: 20px auto;"></div>
     <script>
        CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
                 // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
@@ -205,13 +207,7 @@
                     document.querySelector('#test').innerHTML=JSON.parse(json_send).context;
                 }
 
-                function napraviSablon(){
-                    const div=document.querySelector("[role='textbox']");
-                    let file = new File([div.innerHTML], 'Sablon', {type: 'html'});
-                    let exportUrl = URL.createObjectURL(file);
-                    window.open(exportUrl,'_blank');
-                    URL.revokeObjectURL(exportUrl);
-                }
+               
     </script>
 </body>
 </html>
