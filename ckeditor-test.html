@@ -17,6 +17,10 @@
             max-width: 80%;
             margin: 20px auto;
         }
+        .test {
+            margin: 10px auto;
+            width: 670px;
+        }
     </style>
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/super-build/ckeditor.js"></script> -->
     <script src="ckeditor.js"></script>
@@ -25,11 +29,7 @@
     <h1 style="width: 1000px; margin: 20px auto;">Napucana verzija ck editora</h1>
     <div id="container">
         <div id="editor">
-            <div id="context">
-                <p>Aj neka ovo bude sablon</p>
-                <p>Pozdrav, Tamara.</p>
-
-            </div>
+     
         </div>
     </div>
     
@@ -38,7 +38,7 @@
     </div>
    
 
-    <div id="test" style="border: 1px solid black;width: 1000px; margin: 20px auto;"></div>
+    <div id="test" class="test" style="border: 1px solid black;width: 1000px; margin: 20px auto;"></div>
     <script>
        CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
                 // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
